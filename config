@@ -183,7 +183,7 @@ mode "resize" {
 
 # Bordas do i3
 
-for_window [class="^.*"] border pixel 3 
+for_window [class="^.*"] border pixel 2 
 
 gaps inner 10
 gaps outer 10
@@ -191,11 +191,11 @@ gaps outer 10
 # Cores do i3
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.focused          #0582dd #0582dd #ffffff #0582dd   #0582dd
+client.focused_inactive #0582dd #0582dd #ffffff #0582dd   #0582dd
+client.unfocused        #0865a8 #0865a8 #ffffff #0865a8   #0865a8
+client.urgent           #0582dd #0582dd #ffffff #0582dd   #0582dd
+client.placeholder      #ffffff #ffffff #ffffff #ffffff   #ffffff
 
 bindsym $mod+r mode "resize"
 
@@ -203,11 +203,12 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        status_command i3blocks
+		font pango:DejaVu Sans Mono 8
+		separator_symbol "::"	
 }
 
 
 
-exec_always nitrogen --set-scaled Imagens/Wallpaper/wallpaper.jpg
+exec_always nitrogen --set-scaled Pictures/Wallpapers/wallpaper.jpg
 
 exec_always picom 
